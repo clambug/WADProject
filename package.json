@@ -1,0 +1,14 @@
+{
+  "name": "Peak Atlantic",
+  "version": "1.0.0",
+  "description": "Peak Surf Store",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob Gaughan",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.11.0"
+  }
+}

@@ -1,0 +1,119 @@
+.home-image{
+	max-width:100%;
+	height:auto;
+	}
+html, body, div .home-imge {
+  height: 80%;
+}
+
+.top-image {
+    background-image: url("/peakTop.jpg");
+	  background-attachment:fixed;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.nav1{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-top:20px
+}
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white !important;
+}
+.logoPos {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  padding-top:10px
+}
+
+.titles {
+  text-align: center;
+}
+
+.holder {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    display: -webkit-flex;
+    display: inline-block;
+    width: 100%;
+    padding-top: 80px;
+}
+
+
+.holder {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.large {
+    width: 55%;
+     background-image: url('/running.jpg');
+      background-repeat:no-repeat;
+    background-size:cover;
+    float: left;
+    padding:5px;
+    margin-left:10px;
+    height: 610px;
+}
+
+.normal {
+    width: 30%;
+     background-image: url('/swimming.jpg');
+      background-repeat:no-repeat;
+    background-size:cover;
+    float: left;
+     padding:5px;
+     height: 300px;
+     margin-left:10px;
+     margin-bottom:10px;
+}
+
+.normal2 {
+    width: 30%;
+     background-image: url('/cycling.jpg');
+      background-repeat:no-repeat;
+    background-size:cover;
+    float: left;
+     padding:5px;
+     height: 300px;
+     margin-left:10px;
+     margin-bottom:10px;
+}
+/* Style the footer */
+.footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.footer p{
+    color: #ffffff;
+}
