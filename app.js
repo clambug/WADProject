@@ -33,6 +33,64 @@ db.connect((err) => {
 });
 
 
+//Create DB Table
+app.get('/createtable', function (req, res){
+let sql = 'CREATE TABLE products(id int NOT NULL AUTO_INCREMENT PRIMARY KEY, Name varchar (255), Price int, Image varchar(255), Category varchar(255));'
+let query = db.query(sql,(err,res)=>{
+if (err) throw err;
+console.log(res);
+  
+  
+});
+  res.send("table created!")
+        
+        
+});
+
+
+
+//End Create Table
+
+
+// SQL Insert DataView
+
+app.get('/insert', function (req, res){
+let sql = 'INSERT INTO products (Name, Price, Image, Category) VALUES("Maluku Quad Fish", 560, "qalukuquad.jpg", "Surfboards");'
+let query = db.query(sql,(err,res)=>{
+if (err) throw err;
+console.log(res);
+  
+  
+});
+  res.send("Item created!")
+        
+        
+});
+
+
+
+// SQL insert end
+
+
+// SQL Query
+
+app.get('/querydata', function (req, res){
+let sql = 'SELECT * FROM products'
+let query = db.query(sql,(err,res)=>{
+if (err) throw err;
+console.log(res);
+  
+  
+});
+  res.send("Check The Console")
+        
+        
+});
+
+
+
+// SQL Query end
+
 
 app.get('/', function(req, res){
  // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
@@ -40,12 +98,40 @@ app.get('/', function(req, res){
   console.log("Now you are home!");
 });
 
+//PRoduct Page
+
 app.get('/products', function(req, res){
  // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
-  res.render('products', {root: VIEWS}); // use render command  to render HTML page
+  let sql = 'SELECT * FROM products;'
+  let query = db.query(sql, (err, res1) =>{
+    if(err)
+    throw(err);
+
+  res.render('products', {root: VIEWS, res1}); // use render command  to render HTML page
+  
+});
   console.log("Now you are at the products page!");
 });
+//end product page
 
+
+//item Page
+
+app.get('/item/:id', function(req, res){
+ // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
+  let sql = 'SELECT * FROM products WHERE Id = "'+req.params.id+'";'
+  let query = db.query(sql, (err, res1) =>{
+    if(err)
+    throw(err);
+
+  res.render('item', {root: VIEWS, res1}); // use render command  to render HTML page
+  
+});
+  console.log("You are now veiwing a product!!");
+});
+
+
+//end item page
 
 // We need to set the requirements for teh application to run
 
