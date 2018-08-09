@@ -9,6 +9,8 @@
   "author": "Rob Gaughan",
   "license": "ISC",
   "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jade": "^1.11.0",
     "mysql": "^2.16.0",
