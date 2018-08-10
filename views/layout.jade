@@ -4,8 +4,12 @@ html
     title Peak Atlantic Surf Store
     // Bootstrap CSS
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    //fav
+    link(rel='icon', href='fav.png', type='image/x-icon')
     // Custom CSS
     link(rel='stylesheet', href='../app.css', type='text/css')
+    //fonts
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=font1|font2|etc', type='text/css')
   body
     .top-image
       .header
@@ -13,21 +17,29 @@ html
           img#peakLogo.logo(alt='logo', src='/peakLogo.png')
         .nav1
           .topNav
-            a(href='/') HOME |
-            a(href='/products')  PRODUCTS 
-            a(href='/create') | UPLOAD 
-            a(href='/add') | ADD REVIEW
-            a(href='/add') | SEE REVIEWS
+            a.men(href='/') HOME 
+            a |
+            a.men(href='/products')  PRODUCTS 
+            a |
+            a.men(href='/create')  UPLOAD 
+            a |
+            a.men(href='/add')  ADD REVIEW 
+            a |
+            a.men(href='/reviews')  SEE REVIEWS
       .hero-text
-        h1 THIS IS LUXURY
-        p
-          | Welcome to the most luxurious selection of hi-end yachts on the market.
+        h1 The Worlds Largest Surboard Retail Outlet
+        h5
+          | Welcome to Peak Atlantic!! Take you time and a have a good poke around.
           br
-          | Feel free to take a tour of our catalogue and make you 
-          br
-          | dreams a reality
-        button.button-dark FIND OUT MORE
+          |  Your dream board is awaiting!!
+
+        
+        
+          form(method="post" action="search")
+            label(for="search") SEARCH: 
+            input.lookfor(name="search" type="text", Placehoder="Search for products")
+            button.button-dark Search Products
    block content   
  .footer
-      p
-        | Footer
+      .logoPos
+          img#peakLogo.logo(alt='logo', src='/peakLogo.png')

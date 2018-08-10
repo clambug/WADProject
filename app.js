@@ -156,7 +156,7 @@ app.post('/create', function(req, res){
   let query = db.query(sql,(err,res)=>{
   if (err) throw err;
   console.log(res);
-  consale.log(name)
+  console.log(name)
   
   
 });
@@ -276,6 +276,96 @@ app.post('/add', function(req, res){
 });
 
 // End JSON
+
+//Page to render edit reviews
+app.get('/editreviews/:id', function(req, res){
+  
+  function chooseProd(indOne){
+    return indOne.id === parseInt(req.params.id)
+  }
+  
+  console.log("id of this review is " + req.params.id);
+  
+  var indOne = reviews.filter(chooseProd);
+  
+  res.render('editreview', {indOne:indOne});
+  
+  console.log("Edit Review PAge ");
+  
+});
+
+
+//end render review
+
+//Create post request to edit the individual reviews
+
+
+app.post('/editreviews/:id', function(req, res){
+         var json = JSON.stringify(reviews);
+  
+  var keyToFind = parseInt(req.params.id);
+  
+  var data = reviews;
+  
+  var index = data.map(function(review){review.id}).keyToFind //use the param passed in the URL as a pointer to find the correct review to edit
+  
+  var x = req.body.name;
+  var y = req.body.content;
+  var z = parseInt(req.params.id)
+  
+  reviews.splice(index, 1, {name: req.body.name, content: y, id: z});
+  
+  json = JSON.stringify(reviews, null, 4);
+  
+  fs.writeFile('./models/reviews.json', json, 'utf8');
+  
+  res.redirect("/reviews");
+  
+         });
+
+//end post request to edit the individual reviews
+
+//DELETEc REVIEW
+
+app.get('/deletereview/:id', function(req, res){
+ var json = JSON.stringify(reviews);
+ 
+ var keyToFind = parseInt(req.params.id); // Id passed through the url
+ 
+ var data = reviews;
+ 
+ var index = data.map(function(d){d['id'];}).indexOf(keyToFind)
+ 
+ reviews.splice(index, 1);
+ 
+ json = JSON.stringify(reviews, null, 4);
+ fs.writeFile('./models/reviews.json', json, 'utf8'); // Write the file back
+ res.redirect("/reviews");
+ 
+});
+
+//Search Function
+
+app.post('/search', function(req, res){
+ 
+ let sql = 'SELECT * FROM products WHERE name LIKE "%'+req.body.search+'%";'
+ let query = db.query(sql, (err,res1) =>{
+  if(err)
+  throw(err);
+ // res.redirect("/error")
+  
+  res.render('products', {root: VIEWS, res1});
+  console.log("search complete")
+ });
+
+ 
+});
+
+//search
+
+
+
+
 // We need to set the requirements for teh application to run
 
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0" , function(){

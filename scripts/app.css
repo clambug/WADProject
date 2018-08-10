@@ -1,9 +1,17 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: raleway;
+    font-weight: 400;
+    line-height: 1.2;
+    color: inherit;
+}
+
 .home-image{
 	max-width:100%;
 	height:auto;
 	}
 html, body, div .home-imge {
-  height: 80%;
+  height: 85%;
 }
 
 .top-image {
@@ -16,6 +24,12 @@ html, body, div .home-imge {
     position: relative;
 }
 
+.hero-text {
+    text-align: center;
+    margin-top: 120px;
+    color:#ffffff;
+}
+
 .nav1{
     text-align: center;
     width: 80%;
@@ -24,7 +38,14 @@ html, body, div .home-imge {
     margin-bottom: 10px;
     padding-top:20px
 }
+a.men {
+  color: #fff
+}
 
+a.men:hover {
+  color: #f15111;
+  text-decoration: none;
+}
 .topnav a {
     float: left;
     color: #000000;
@@ -57,12 +78,121 @@ html, body, div .home-imge {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* SEARCH FORM*/
+input.lookfor {
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 5px;
+    margin: 20px 10px !important;
+    background: rgba(253, 253, 253, 0.7);
+    padding: 3px !important;
+    width: 13% !important;
+}
+
+form {
+    margin-top: 35px;
+}
+
+.button-dark {
+    background: rgba(189, 189, 189, 0.51);
+    color: #ffffff;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.button-dark:hover {
+    background: rgba(228, 92, 26, 0.63);
+    color: #ffffff;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+
+/* HOME PAGE*/
+
+.grid-container {
+  display: grid;
+  height: 650px;
+  grid-template-columns: 1fr 1.75fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px 20px;
+  grid-template-areas: "lft mddl rght" "lstbttm mddlbtm rghtbttm";
+}
+
+.rght {
+  background-image: url('/ripcurl.jpg');
+  display: grid;
+  grid-area: rght;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: ". ." ". .";
+}
+
+
+.rghtbttm { 
+  background-image: url('/reef.jpg');
+  grid-area: rghtbttm;
+  background-size:cover;
+
+}
+
+.lft { 
+  grid-area: lft;
+  background-image: url('/rash_vests.jpg');
+  background-size:cover;
+
+}
+
+.lstbttm { 
+  grid-area: lstbttm;
+  background-image: url('/maulku1.jpg');
+  background-size:cover;
+
+}
+
+.mddl { grid-area: mddl;
+  background-image: url('/fourth.jpg');
+  background-size:cover;
+
+}
+
+.mddlbtm { 
+  grid-area: mddlbtm;
+  background-image: url('/surfboards.jpg');
+  background-size:cover;
+
+
+}
+
+.hmtit {
+  text-align: center;
+}
+
+
+
 .row {
     display: -webkit-flex;
     display: inline-block;
     width: 100%;
-    padding-top: 80px;
+    padding: 80px;
 }
+
+
+/* PRODUCT PAGE*/
+
+.grid-containerP {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
+  grid-template-rows: 1.5fr 1.5fr 1.5fr;
+  grid-gap: 15px 15px;
+  grid-template-areas: ". . . ." ". . . ." ". . . .";
+}
+
+
 
 
 .holder {
@@ -74,7 +204,7 @@ html, body, div .home-imge {
 
 .large {
     width: 55%;
-     background-image: url('/running.jpg');
+     background-image: url('/rash_vest.jpg');
       background-repeat:no-repeat;
     background-size:cover;
     float: left;
@@ -118,22 +248,53 @@ html, body, div .home-imge {
     color: #ffffff;
 }
 
-.formHold {
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    width:90%;
+/* Style for form */
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    margin: auto;
+    width: 50%;
+}
+
+/* End Style for form */
 
 /* Style for products page */
 
 
-.grid-container {
+.grid-container1 {
   display: grid;
   align-content: center;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
- /* background-color: #2196F3;  Comment this out later to remove the background color when not needed */
   padding: 10px;
 }
 
@@ -156,7 +317,7 @@ html, body, div .home-imge {
 
 .itemtitle {
    display: block;
-    color: #4CAF50;
+    color: #000000;
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
@@ -166,19 +327,17 @@ html, body, div .home-imge {
 
 
 .itemp {
-   display: block;
-    color: #4CAF50;
+    display: block;
+    color: #3cbbe8;
     text-align: center;
     padding: 4px 6px;
     text-decoration: none;
-    font-size: 16px
-    
+    font-size: 22px;
 }
 
 
-
 .pimage {
-    width: 30%; 
+    width: 80%; 
     margin-left: auto; 
     margin-right: auto; 
     display: block;
@@ -187,17 +346,32 @@ html, body, div .home-imge {
 
 
 .button {
-    background-color: #4CAF50;
+    background-color: #505050;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px 4px;
     cursor: pointer;
 }
+
+.button1 {
+    background-color: #505050;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    width:100%;
+}
+
 
 
 
