@@ -3,16 +3,52 @@ block content
     .row
       h1.hmtit SURF CATEGORIES
       .grid-container
-       .rght
-         h1.hmtit Surfing1
-       .rghtbttm
-         h1 Surfing1
-       .lft
-         h1 Surfing1
-       .lstbttm
-         h1 Surfing1
-       .mddl
-         h1 Surfing1
-       .mddlbtm
-         h1 Surfing1
-   
+       #pp.rght
+         h1#ripc.hmtit1 Rip Curl
+       #pp1.rghtbttm
+         h1#rf.hmtit1  Reef
+       #pp2.lft
+         h1#am.hmtit1 Al Merrick
+       #pp3.lstbttm
+         h1#m.hmtit1 Maluku
+       #pp4.mddl
+         h1#f.hmtit1 Fourth
+       #pp5.mddlbtm
+         h1#mo.hmtit1 Monster
+       script.
+
+        $(document).ready(function(){
+        $("#pp").hover(function(){
+        $("#ripc").toggle();
+        });
+        });
+
+        $(document).ready(function(){
+        $("#pp1").hover(function(){
+        $("#rf").toggle();
+        });
+        });
+        
+        $(document).ready(function(){
+        $("#pp2").hover(function(){
+        $("#am").toggle();
+        });
+        });
+
+        $(document).ready(function(){
+        $("#pp3").hover(function(){
+        $("#m").toggle();
+        });
+        });
+
+        $(document).ready(function(){
+        $("#pp4").hover(function(){
+        $("#f").toggle();
+        });
+        });
+
+        $(document).ready(function(){
+        $("#pp5").hover(function(){
+        $("#mo").toggle();
+        });
+        });

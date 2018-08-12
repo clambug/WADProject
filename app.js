@@ -257,6 +257,7 @@ app.post('/add', function(req, res){
 		name: req.body.name, // name called from the add.jade page textbox
 		id: newId, // this is the variable created above
 		content: req.body.content, // content called from the add.jade page textbox
+    image: req.body.image, //content called for image
 
 	};
 		console.log(review) // Console log the new product 
@@ -309,11 +310,12 @@ app.post('/editreviews/:id', function(req, res){
   
   var index = data.map(function(review){review.id}).keyToFind //use the param passed in the URL as a pointer to find the correct review to edit
   
+  var w = req.body.image;
   var x = req.body.name;
   var y = req.body.content;
   var z = parseInt(req.params.id)
   
-  reviews.splice(index, 1, {name: req.body.name, content: y, id: z});
+  reviews.splice(index, 1, {name: req.body.name, content: y, id: z, image: w,});
   
   json = JSON.stringify(reviews, null, 4);
   
@@ -334,7 +336,7 @@ app.get('/deletereview/:id', function(req, res){
  
  var data = reviews;
  
- var index = data.map(function(d){d['id'];}).indexOf(keyToFind)
+ var index = data.map(function(d){d[':id'];}).indexOf(keyToFind)
  
  reviews.splice(index, 1);
  

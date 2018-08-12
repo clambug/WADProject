@@ -94,7 +94,7 @@ form {
 }
 
 .button-dark {
-    background: rgba(189, 189, 189, 0.51);
+    background: rgba(228, 92, 26, 0.63);
     color: #ffffff;
     padding: 5px;
     border: 2px solid;
@@ -102,7 +102,7 @@ form {
 }
 
 .button-dark:hover {
-    background: rgba(228, 92, 26, 0.63);
+    background: rgba(189, 189, 189, 0.51);
     color: #ffffff;
     padding: 5px;
     border: 2px solid;
@@ -118,7 +118,7 @@ form {
   grid-template-columns: 1fr 1.75fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px 20px;
-  grid-template-areas: "lft mddl rght" "lstbttm mddlbtm rghtbttm";
+  grid-template-areas: "lft mddl rght" "lstbttm mddlbtm rghtbttm ";
 }
 
 .rght {
@@ -129,8 +129,42 @@ form {
   grid-template-rows: 1fr 1fr;
   grid-gap: 1px 1px;
   grid-template-areas: ". ." ". .";
+
 }
 
+.hmtit1 {
+    text-align: center;
+    color: #fff;
+    position:absolute;
+    background:#000;
+    padding: 5px;
+
+}
+
+
+#ripc {
+  display: none;
+}
+
+#rf {
+  display: none;
+}
+
+#am {
+  display: none;
+}
+
+#m {
+  display: none;
+}
+
+#f {
+  display: none;
+}
+
+#mo {
+  display: none;
+}
 
 .rghtbttm { 
   background-image: url('/reef.jpg');
@@ -202,44 +236,95 @@ form {
     margin-right: auto;
 }
 
-.large {
-    width: 55%;
-     background-image: url('/rash_vest.jpg');
-      background-repeat:no-repeat;
-    background-size:cover;
-    float: left;
-    padding:5px;
-    margin-left:10px;
-    height: 610px;
+a.button:hover {
+    background: #f15111 !important;
+    color: #fff;
+    text-decoration: none;
 }
 
-.normal {
-    width: 30%;
-     background-image: url('/swimming.jpg');
-      background-repeat:no-repeat;
-    background-size:cover;
-    float: left;
-     padding:5px;
-     height: 300px;
-     margin-left:10px;
-     margin-bottom:10px;
+.itempc {
+    text-align: center;
+    font-size: 18px;
 }
 
-.normal2 {
-    width: 30%;
-     background-image: url('/cycling.jpg');
-      background-repeat:no-repeat;
-    background-size:cover;
-    float: left;
-     padding:5px;
-     height: 300px;
-     margin-left:10px;
-     margin-bottom:10px;
+/* REVIEWS PAGE*/
+
+.grid-container-R {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-gap: 15px 15px;
+  grid-template-areas: "." "." "." ".";
 }
+
+.item-R {
+    background-color: rgba(243, 242, 242, 0.25);
+    text-align: left;
+    padding: 13px;
+    border: 2px solid rgba(236, 236, 236, 0.58);
+    border-radius: 5px;
+    font-size: 19px;
+}
+.item-R1 {
+    text-align: left;
+}
+
+.itemtitle-R {
+    display: block;
+    color: #007fad;
+    text-align: left;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 39px;
+    margin-left: 95px;
+}
+
+.button-R {
+    background-color: #005473;
+    border: 1px solid transparent;
+    color: #ffffff;
+    padding: 4px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+a.button-R: hover {
+    background-color: #24c3fd;
+    border: 1px solid transparent;
+    color: #ffffff;
+    padding: 4px 30px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.holder-R {
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.pimage-R {
+    width: 6%;
+    border-radius: 50%;
+    margin-bottom: -90px;
+}
+
 /* Style the footer */
 .footer {
-    background-color: #000000;
-    padding: 10px;
+    background-color: #2f2f2f;
+    padding: 60px;
     text-align: center;
 }
 

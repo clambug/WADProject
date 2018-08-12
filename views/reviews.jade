@@ -1,13 +1,15 @@
 extends layout
 block content
     .row
-      .holder
+      .holder-R
         h1
-          | Reviews
-          .grid-container
+          | Product Reviews
+          .grid-container-R
             each review in reviews
-             .item
-              h1.itemtitle #{review.name}
-              p.item #{review.content}
-              a.button(href="/editreviews/#{review.id}") Edit #{review.Name}
-              a.button(href="/deletereview/#{review.id}") Delete #{review.id}
+             .item-R1
+              img.pimage-R(src="#{review.image}")
+              h1.itemtitle-R #{review.name}
+              p.item-R #{review.content}
+               .buts-R
+               a.button-R(href="/editreviews/#{review.id}") Edit #{review.Name}
+               a.button-R(href="/deletereview/#{review.id}") Delete #{review.id}

@@ -1,13 +1,14 @@
 [
     {
-        "name": [
-            "TEST REVIEW",
-            "TEST REVIEW"
-        ],
-        "content": [
-            "444",
-            "TEST REVIEW"
-        ],
-        "id": 2
+        "name": "Satu Pintail Review",
+        "content": "The main core of the surfboard is super fused EPS foam, then it's cut in half and inserted with a PU foam central flex dampener which gives you a core that has liveliness to it and loads of flexy spring. This is then wrapped in two layers of glass on the bottom of the board using a unique tiered lap which gives you unreal flex recoil and a tensile strength 20% stronger than a standard 4oz cloth.",
+        "id": 6,
+        "image": "satu-tail.jpg"
+    },
+    {
+        "name": "Satu Pintail",
+        "id": 6,
+        "content": "The main core of the surfboard is super fused EPS foam, then it's cut in half and inserted with a PU foam central flex dampener which gives you a core that has liveliness to it and loads of flexy spring. This is then wrapped in two layers of glass on the bottom of the board using a unique tiered lap which gives you unreal flex recoil and a tensile strength 20% stronger than a standard 4oz cloth.",
+        "image": "satu-tail.jpg"
     }
 ]

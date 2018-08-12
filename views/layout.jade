@@ -10,6 +10,8 @@ html
     link(rel='stylesheet', href='../app.css', type='text/css')
     //fonts
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=font1|font2|etc', type='text/css')
+    // jquery
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
   body
     .top-image
       .header
@@ -28,7 +30,7 @@ html
             a.men(href='/reviews')  SEE REVIEWS
       .hero-text
         h1 The Worlds Largest Surboard Retail Outlet
-        h5
+        h4
           | Welcome to Peak Atlantic!! Take you time and a have a good poke around.
           br
           |  Your dream board is awaiting!!
@@ -39,6 +41,8 @@ html
             label(for="search") SEARCH: 
             input.lookfor(name="search" type="text", Placehoder="Search for products")
             button.button-dark Search Products
+            
+             
    block content   
  .footer
       .logoPos

@@ -8,6 +8,8 @@ block content
          fieldset
           label(for="name") Product Name:
           input(name="name", type="text", value="#{review.name}")
-          label(for="content") Add review:
-          input(name="content", type="text", value="#{review.name}")
+          label(for="content") Edit review:
+          input(name="content", type="text", value="#{review.content}")
+          label(for="image") Edit Image:
+          input(name="image", type="text", value="#{review.image}")
           button.button(type="submit") Edit Review
