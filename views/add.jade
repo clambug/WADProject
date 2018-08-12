@@ -7,9 +7,9 @@ block content
        form(method="post")
         fieldset
          label(for="name") Product Name:
-         input(name="name", type="text", placeholder='Product Name')
+         input(name="name", type="text", placeholder='Product Name', maxlength='40')
          label(for="image") Product Image:
-         input(name="image", type="text", placeholder='Product Image')
+         input(name="image", type="text", placeholder='Product Image', pattern=".+.jpg", title="Must be a Jpeg image file only")
          label(for="content") Add review:
-         input(name="content", type="text", placeholder='Write your review')
+         input(name="content", type="text", placeholder='Write your review', maxlength='400')
          button.button1(type="submit") Add Review

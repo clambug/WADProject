@@ -32,7 +32,6 @@ const db = mysql.createConnection({
 db.connect((err) => {
   if(err){
     console.log("Database Connection Error")
-   // throw(err)  // Un comment this to throw the error rather than just log "You broke it"
   }
   else{
   
@@ -101,7 +100,6 @@ console.log(res);
 
 
 app.get('/', function(req, res){
- // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
   res.render('index', {root: VIEWS});
   console.log("Now you are home!");
 });
@@ -109,7 +107,6 @@ app.get('/', function(req, res){
 //PRoduct Page
 
 app.get('/products', function(req, res){
- // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
   let sql = 'SELECT * FROM products;'
   let query = db.query(sql, (err, res1) =>{
     if(err)
@@ -126,7 +123,6 @@ app.get('/products', function(req, res){
 //item Page
 
 app.get('/item/:id', function(req, res){
- // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
   let sql = 'SELECT * FROM products WHERE Id = "'+req.params.id+'";'
   let query = db.query(sql, (err, res1) =>{
     if(err)
@@ -168,7 +164,6 @@ res.render('index', {root: VIEWS});
 
 //Edit product
 app.get('/edit/:id', function(req, res){
- // res.send("Hello cruel world!"); // This is commented out to allow the index view to be rendered
   let sql = 'SELECT * FROM products WHERE Id = "'+req.params.id+'";'
   let query = db.query(sql, (err, res1) =>{
     if(err)
@@ -207,7 +202,7 @@ app.get('/delete/:id', function(req, res){
   
  });
  
- console.log("Its Gone!");
+ console.log("PRoduct Deleted!");
 });
 
 
@@ -216,7 +211,7 @@ app.get('/reviews', function(req, res){
   res.render("reviews", {reviews:reviews})
   
 });
-console.log("reviews on show")
+console.log("You are now at the reviews page")
 
 
 //route to render add json page
@@ -291,7 +286,7 @@ app.get('/editreviews/:id', function(req, res){
   
   res.render('editreview', {indOne:indOne});
   
-  console.log("Edit Review PAge ");
+  console.log("Edit Review Page ");
   
 });
 
@@ -336,7 +331,7 @@ app.get('/deletereview/:id', function(req, res){
  
  var data = reviews;
  
- var index = data.map(function(d){d[':id'];}).indexOf(keyToFind)
+ var index = data.map(function(d){d[':Id'];}).indexOf(keyToFind)
  
  reviews.splice(index, 1);
  
@@ -371,5 +366,5 @@ app.post('/search', function(req, res){
 // We need to set the requirements for teh application to run
 
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0" , function(){
-  console.log("App is Running ......... Yessssssssssssss!")
+  console.log("App is Running ...Cowabunga!")
 });

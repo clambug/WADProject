@@ -4,13 +4,13 @@ block content
       .holder
         h1
           | PRODUCT DESCRIPTION
-          .col-xs-4
+          .col-xs-1
             each row in res1
              .item
               h1.itemtitle #{row.Name}
-              img.pimage(src="#{row.Image}", alt="mulak")
+              img.pimage(src="#{row.Image}", alt="#{row.Image}")
               p.itemp Price: &euro;#{row.Price}
-              p.item Category: #{row.category}
+              p.item Category: #{row.Category}
               a.button(href="/delete/#{row.id}") Delete
               a.button(href="/edit/#{row.id}") Edit
               a.button(href="/delete/#{row.id}") Delete

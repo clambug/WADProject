@@ -1,14 +1,26 @@
 [
     {
-        "name": "Satu Pintail Review",
+        "name": "Weiss Guy",
         "content": "The main core of the surfboard is super fused EPS foam, then it's cut in half and inserted with a PU foam central flex dampener which gives you a core that has liveliness to it and loads of flexy spring. This is then wrapped in two layers of glass on the bottom of the board using a unique tiered lap which gives you unreal flex recoil and a tensile strength 20% stronger than a standard 4oz cloth.",
-        "id": 6,
-        "image": "satu-tail.jpg"
+        "id": 1,
+        "image": "weiss.jpg"
     },
     {
-        "name": "Satu Pintail",
-        "id": 6,
+        "name": "The Doofer",
+        "id": 2,
         "content": "The main core of the surfboard is super fused EPS foam, then it's cut in half and inserted with a PU foam central flex dampener which gives you a core that has liveliness to it and loads of flexy spring. This is then wrapped in two layers of glass on the bottom of the board using a unique tiered lap which gives you unreal flex recoil and a tensile strength 20% stronger than a standard 4oz cloth.",
-        "image": "satu-tail.jpg"
+        "image": "doofer-new-1.jpg"
+    },
+    {
+        "name": "Monster Board",
+        "id": 3,
+        "content": "This was an awesome experience. Thoroughly enjoyed it.!! ",
+        "image": "monster-surfboard.jpg"
+    },
+    {
+        "name": "Flying Frog",
+        "id": 4,
+        "content": "This is the best surfboard i have ever ridden. I cant get over the speed and agility for such a froggy looking thing. Will definitely recommend to to surf buddies. ",
+        "image": "maluku-flying-frog.jpg"
     }
 ]

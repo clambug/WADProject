@@ -7,11 +7,11 @@ block content
        form(method="post")
         fieldset
          label(for="name") Product Name:
-         input(name="name", type="text", placeholder='Product Name')
+         input(name="name", type="text", placeholder='Product Name', maxlength='40')
          label(for="price") Product Price:
-         input(name="price", type="text", placeholder='Product Price')
+         input(name="price", type="text", placeholder='Product Price', maxlength="15", pattern="[0-9]+", title="Must be a numerical value!!")
          label(for="image") Product Image:
-         input(name="image", type="text", placeholder='Product Image')
+         input(name="image", type="text", placeholder='Product Image', pattern=".+.jpg", title="Must be a Jpeg image file only")
          label(for="category") Product Category:
-         input(name="category", type="text", placeholder='Product Category')
+         input(name="category", type="text", placeholder='Product Category', maxlength='40')
          button.button1(type="submit") Create Product

@@ -7,9 +7,9 @@ block content
         each review in indOne
          fieldset
           label(for="name") Product Name:
-          input(name="name", type="text", value="#{review.name}")
+          input(name="name", type="text", value="#{review.name}", maxlength='40')
           label(for="content") Edit review:
-          input(name="content", type="text", value="#{review.content}")
+          input(name="content", type="text", value="#{review.content}", maxlength='40')
           label(for="image") Edit Image:
-          input(name="image", type="text", value="#{review.image}")
+          input(name="image", type="text", value="#{review.image}", pattern=".+.jpg", title="Must be a Jpeg image file only")
           button.button(type="submit") Edit Review
